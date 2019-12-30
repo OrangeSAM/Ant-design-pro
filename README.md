@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ant-design-pro
 
 ## Project setup
@@ -32,3 +33,7 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# Ant-design-pro
+唐金州Vue开发实战课程, 实战环节内容.
+>>>>>>> 08f4fc937a3f3ac37eacd752419e2168cdf2211b
