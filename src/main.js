@@ -9,6 +9,7 @@ import store from "./store";
 // import Antd from "ant-design-vue";
 // Vue.use(Antd);
 
+// 按需引入
 import { Button } from "ant-design-vue";
 Vue.use(Button);
 
