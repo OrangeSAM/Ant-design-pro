@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 
@@ -12,7 +11,7 @@ const routes = [
     // 使用JSX语法创建router-view标签
     // component: { render: h => h("router-view") },
     component: () =>
-      import(/* webpackChunkName: "user" */ "../layout/userLayout.vue"),
+      import(/* webpackChunkName: "user" */ "../layout/UserLayout.vue"),
     redirect: "/user/login",
     children: [
       {
@@ -110,20 +109,6 @@ const routes = [
     path: "*",
     name: "404",
     component: () => import(/* webpackChunkName: "about" */ "../views/404.vue")
-  },
-  {
-    path: "/",
-    name: "home",
-    component: Home
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
   }
 ];
 
@@ -133,8 +118,12 @@ const router = new VueRouter({
   routes
 });
 
-router.beforeEach((to, form, next) => {
-  NProgress.start();
+// 配置nprogress使生效
+router.beforeEach((to, from, next) => {
+  if (to.path !== from.path) {
+    NProgress.start();
+    // 路径变化才显示加载进度
+  }
   next();
 });
 

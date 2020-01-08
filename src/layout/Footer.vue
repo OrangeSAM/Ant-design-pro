@@ -1,11 +1,9 @@
 <template>
-  <div>footer</div>
+  <div>Ant Design Pro ©2020 Created by Sam</div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-
-export default Vue.extend({});
+<script>
+export default {};
 </script>
 
 <style scoped></style>

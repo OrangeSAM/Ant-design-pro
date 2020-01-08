@@ -1,11 +1,13 @@
 <template>
-  <div>header</div>
+  <div class="header">header</div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
-
-export default Vue.extend({});
+<script>
+export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+.header {
+  float: right;
+}
+</style>
