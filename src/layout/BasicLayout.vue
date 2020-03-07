@@ -1,8 +1,15 @@
 <template>
-  <div>
+  <div :class="[`nav-theme-${navTheme}`, `nav-layout-${navLayout}`]">
     <a-layout id="components-layout-demo-side" style="min-height: 100vh">
-      <a-layout-sider collapsible v-model="collapsed" :trigger="null">
-        <div class="logo" />
+      <a-layout-sider
+        collapsible
+        v-if="navLayout === 'left'"
+        v-model="collapsed"
+        :trigger="null"
+      >
+        <div class="logo">
+          Ant design vue pro
+        </div>
         <SiderMenu />
       </a-layout-sider>
       <a-layout>
@@ -62,5 +69,14 @@ export default {
 }
 .menu-icon:hover {
   background-color: #eeeeee;
+}
+.logo {
+  height: 64px;
+  line-height: 64px;
+  text-align: center;
+  overflow: hidden;
+}
+.nav-theme-dark >>> .logo {
+  color: #ffffff;
 }
 </style>

@@ -48,7 +48,7 @@ const routes = [
             name: "analysis",
             component: () =>
               import(
-                /* webpackChunkName: "dashboard" */ "../layout/DashBoard/Analysis"
+                /* webpackChunkName: "dashboard" */ "../views/DashBoard/Analysis"
               )
           }
         ]
@@ -63,13 +63,13 @@ const routes = [
             path: "/form/basic-form",
             name: "basicform",
             component: () =>
-              import(/* webpackChunkName: "form" */ "../layout/Forms/BasicForm")
+              import(/* webpackChunkName: "form" */ "../views/Forms/BasicForm")
           },
           {
             path: "/form/step-form",
             name: "stepform",
             component: () =>
-              import(/* webpackChunkName: "form" */ "../layout/Forms/StepForm"),
+              import(/* webpackChunkName: "form" */ "../views/Forms/StepForm"),
             children: [
               {
                 path: "/form/step-form",
@@ -80,7 +80,7 @@ const routes = [
                 name: "info",
                 component: () =>
                   import(
-                    /* webpackChunkName: "form" */ "../layout/Forms/StepForm/Step1"
+                    /* webpackChunkName: "form" */ "../views/Forms/StepForm/Step1"
                   )
               },
               {
@@ -88,7 +88,7 @@ const routes = [
                 name: "confirm",
                 component: () =>
                   import(
-                    /* webpackChunkName: "form" */ "../layout/Forms/StepForm/Step2"
+                    /* webpackChunkName: "form" */ "../views/Forms/StepForm/Step2"
                   )
               },
               {
@@ -96,7 +96,7 @@ const routes = [
                 name: "result",
                 component: () =>
                   import(
-                    /* webpackChunkName: "form" */ "../layout/Forms/StepForm/Step3"
+                    /* webpackChunkName: "form" */ "../views/Forms/StepForm/Step3"
                   )
               }
             ]
@@ -108,7 +108,8 @@ const routes = [
   {
     path: "*",
     name: "404",
-    component: () => import(/* webpackChunkName: "about" */ "../views/404.vue")
+    component: () =>
+      import(/* webpackChunkName: "notfound" */ "../views/404.vue")
   }
 ];
 
