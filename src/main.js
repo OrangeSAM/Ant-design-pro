@@ -10,13 +10,14 @@ import store from "./store";
 // Vue.use(Antd);
 
 // 按需引入
-import { Button, Layout, Icon, Drawer, Radio } from "ant-design-vue";
+import { Button, Layout, Icon, Drawer, Radio, Menu } from "ant-design-vue";
 // 为啥use的时候又只能挨个use呢
 Vue.use(Button);
 Vue.use(Layout);
 Vue.use(Icon);
 Vue.use(Drawer);
 Vue.use(Radio);
+Vue.use(Menu);
 
 Vue.config.productionTip = false;
 

@@ -3,14 +3,16 @@
     <a-layout id="components-layout-demo-side" style="min-height: 100vh">
       <a-layout-sider
         collapsible
+        :theme="navTheme"
         v-if="navLayout === 'left'"
         v-model="collapsed"
         :trigger="null"
+        width="256px"
       >
         <div class="logo">
           Ant design vue pro
         </div>
-        <SiderMenu />
+        <SiderMenu :theme="navTheme" />
       </a-layout-sider>
       <a-layout>
         <a-layout-header style="background: #fff; padding: 0">
